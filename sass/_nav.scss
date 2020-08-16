@@ -1,0 +1,41 @@
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2rem $margin-body-right 2rem $margin-body-left;
+
+    &__logo {
+        width: 50%;
+
+        &--logo {
+            width: 148px;
+            height: 25px;
+            cursor: pointer;
+        }
+    }
+
+    &__list {
+        width: 30%;
+        list-style-type: none;
+        color: $very-dark-blue;
+        font-size: .8rem;
+        margin-left: auto;
+
+        &--item {
+            display: inline;
+            margin-left: 10%;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $soft-red;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__btn {
+        @include btn($white, $soft-red, .5rem 1.7rem);
+        margin: 0 auto 0 0;
+        text-transform: uppercase;
+    }
+}

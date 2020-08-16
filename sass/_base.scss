@@ -1,0 +1,81 @@
+// COLORS PRIMARY
+
+$soft-blue: hsl(231, 69%, 60%);
+$soft-red: hsl(0, 94%, 66%);
+
+// COLORS NEUTRAL
+
+$grayish-blue: hsl(229, 8%, 60%);
+$very-dark-blue: hsl(229, 31%, 21%);
+$medium-grayish-blue: hsl(210, 2%, 79%);
+$light-grayish-blue: hsl(0, 0%, 95%);
+$white: hsl(0, 100%, 100%);
+
+
+
+// TYPOGRAPHY
+
+$font-family-default: 'Rubik', sans-serif;
+$font-size-default: 112.5%;
+$line-height-default: 1.8rem;
+$font-color-default: $grayish-blue;
+$font-weight-400: 400;
+$font-weight-500: 500;
+
+
+
+// PADDING & MARGIN
+
+$margin-body-left: 8vw;
+$margin-body-right: 4vw;
+
+
+
+// MIXIN
+@mixin btn ($font-color, $bg-color, $padding) {
+    width: fit-content;
+    padding: $padding;
+    font-size: .8rem;
+    color: $font-color;
+    background-color: $bg-color;
+    border: .1rem solid transparent;
+    border-radius: .2rem;
+    box-shadow: 0 .15rem .3rem $medium-grayish-blue;
+    transition: all .2s;
+
+    &:hover {
+        color: $bg-color;
+        background-color: $font-color;
+        border: .1rem solid $bg-color;
+        cursor: pointer;
+        box-shadow: 0 .2rem .4rem $medium-grayish-blue;
+    }
+
+    &:active {
+        transform: scale(.97);
+        box-shadow: 0 .1rem .3.5rem $medium-grayish-blue;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin h2 {
+    font-size: 1.5rem;
+    font-weight: $font-weight-500;
+    line-height: 2rem;
+    color: $very-dark-blue;
+}
+
+@mixin features-bg-blue ($width, $height, $left) {
+    content: "";
+    width: $width;
+    height: $height;
+    position: absolute;
+    top: 5vw;
+    left: $left;
+    background-color: $soft-blue;
+    border-radius: 0 10rem 10rem 0;
+    z-index: -100;
+}

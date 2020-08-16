@@ -1,0 +1,61 @@
+.header {
+    display: flex;
+    align-items: center;
+    margin: 0 $margin-body-right 0 $margin-body-left;
+
+    &__content {
+        width: 50%;
+        margin-right: 5vw;
+
+        &--h1 {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            font-weight: $font-weight-500;
+            color: $very-dark-blue;
+        }
+
+        &--text {
+            margin: 2rem 0;
+        }
+
+        &--buttons {
+
+            &-chrome {
+                @include btn($white, $soft-blue, .5rem 1rem);
+                margin-right: .7rem;
+            }
+
+            &-firefox {
+                @include btn($very-dark-blue, $light-grayish-blue, .5rem 1rem);
+                
+                &:hover {
+                    color: $very-dark-blue;
+                    background-color: $white;
+                    border: .1rem solid $very-dark-blue;
+                }
+            }
+        }
+    }
+
+    &__img {
+        align-self: flex-start;
+        width: 50%;
+        
+        &--image {
+            width: 100%;
+            position: relative;
+        }
+
+        &::after {
+            content: "";
+            width: 37vw;
+            height: 25vw;
+            position: absolute;
+            top: 10rem;
+            right: 0;
+            background-color: $soft-blue;
+            border-radius: 10rem 0 0 10rem;
+            z-index: -100;
+        }
+    }
+}
