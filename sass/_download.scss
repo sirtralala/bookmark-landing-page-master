@@ -1,0 +1,61 @@
+.download {
+    text-align: center;
+
+    &__h2 {
+        @include h2;
+        margin-bottom: 1.5rem;
+    }
+
+    &__text {
+        margin: 0 auto 2.5rem auto;
+        max-width: 50%;
+    }
+
+    &__browsers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5rem 0;
+
+        &--browser {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem 1rem 1rem 1rem;
+            margin: 0 1rem;
+            border-radius: 0 0 1rem 1rem;
+            background: url("../images/bg-dots.svg") no-repeat 0 73%;
+            box-shadow: .2rem .5rem .5rem $light-grayish-blue, -.2rem .5rem .5rem $light-grayish-blue;
+
+            &:first-child {
+                transform: translateY(-2rem);
+            }
+
+            &:last-child {
+                transform: translateY(2rem);
+            }
+
+            &-img {
+                width: 40%;
+                margin: 0 auto;
+            }
+
+            &-h3 {
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+                font-weight: $font-weight-500;
+                color: $very-dark-blue;
+                margin: 1rem 0 .2rem 0;
+            }
+
+            &-text {
+                font-size: .9rem;
+            }
+
+            &-btn {
+                @include btn ($white, $soft-blue, .7rem 2rem);
+                margin: 3rem auto 0 auto;
+            }
+        }
+    }
+}

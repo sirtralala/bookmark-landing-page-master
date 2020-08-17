@@ -1,0 +1,52 @@
+.faq {
+    margin-top: 8rem;
+    text-align: center;
+
+    &__h2 {
+        @include h2;
+    }
+
+    &__text {
+        margin: 1rem auto 2rem auto;
+        max-width: 40%;
+    }
+
+    &__question-answer {
+        width: 40%;
+        margin: 0 auto;
+        text-align: left;
+        border-bottom: 1px solid $medium-grayish-blue;
+        cursor: pointer;
+    }
+
+    &__question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--text {
+            color: $very-dark-blue;
+            padding: 1rem 0;
+        }
+        
+        &--icon {
+            width: 1rem;
+            height: 12px;
+        }
+
+        &--icon-close {
+            transform: rotate(180deg);
+            filter: invert(36%) sepia(88%) saturate(481%) hue-rotate(314deg) brightness(115%) contrast(96%);
+        }
+    }
+
+    &__answer {
+        display: none;
+        margin: 1rem auto;
+    }
+
+    &__btn {
+        @include btn ($white, $soft-blue, .5rem 1rem);
+        margin: 4rem auto;
+    }
+}

@@ -61,16 +61,17 @@
     Our aim is to make it quick and easy for you to access your favourite websites. 
     Your bookmarks sync between your devices so you can access them on the go.
   </p>
+
   <div class="features__tabs">
-    <label for="tab-1" class="features__tabs--tab"><p>Simple Bookmarking</p></label>
-    <input type="radio" name="features" class="features__tabs--checkbox" id="tab-1" checked>
-
-    <label for="tab-2" class="features__tabs--tab"><p>Speedy Searching</p></label>
-    <input type="radio" name="features" class="features__tabs--checkbox" id="tab-2">
-
-    <label for="tab-3" class="features__tabs--tab"><p>Easy Sharing</p></label>
-    <input type="radio" name="features" class="features__tabs--checkbox" id="tab-3">
-
+    <input type="radio" name="features" class="features__tabs--radio" id="tab-1" checked>
+    <label for="tab-1" class="features__tabs--tab" id="label-1"><p>Simple Bookmarking</p></label>
+    
+    <input type="radio" name="features" class="features__tabs--radio" id="tab-2">
+    <label for="tab-2" class="features__tabs--tab" id="label-2"><p>Speedy Searching</p></label>
+    
+    <input type="radio" name="features" class="features__tabs--radio" id="tab-3">
+    <label for="tab-3" class="features__tabs--tab" id="label-3"><p>Easy Sharing</p></label>
+    
     <div class="features__tabs--target-1">
       <div class="features__tabs--target-img-container">
         <img src="./images/illustration-features-tab-1.svg" alt="Feature 1" class="features__tabs--target-img">
@@ -115,66 +116,107 @@
   </div>
 </section>  
 
-  Download the extension
+<section class="download">
+  <h2 class="download__h2">Download the extension</h2>
+  <p class="download__text">
+    We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+    got a favourite you’d like us to prioritize.
+  </p>
 
-  We’ve got more browsers in the pipeline. Please do let us know if you’ve 
-  got a favourite you’d like us to prioritize.
+  <div class="download__browsers">
+    <div class="download__browsers--browser">
+      <img src="./images/logo-chrome.svg" alt="Chrome logo" class="download__browsers--browser-img">
+      <h3 class="download__browsers--browser-h3">Add to Chrome</h3>
+      <p class="download__browsers--browser-text">Minimum version 62</p>
+      <button class="download__browsers--browser-btn">Add & Install Extension</button>
+    </div>
+    <div class="download__browsers--browser">
+      <img src="./images/logo-firefox.svg" alt="Firefox logo" class="download__browsers--browser-img">
+      <h3 class="download__browsers--browser-h3">Add to Firefox</h3>
+      <p class="download__browsers--browser-text">Minimum version 55</p>
+      <button class="download__browsers--browser-btn">Add & Install Extension</button>
+    </div>
+    <div class="download__browsers--browser">
+      <img src="./images/logo-opera.svg" alt="Opera logo" class="download__browsers--browser-img">
+      <h3 class="download__browsers--browser-h3">Add to Opera</h3>
+      <p class="download__browsers--browser-text">Minimum version 46</p>
+      <button class="download__browsers--browser-btn">Add & Install Extension</button>
+    </div>
+  </div>
+</section>
 
-  Add to Chrome
-  Minimum version 62
-  Add & Install Extension
+<section class="faq">
+  <h2 class="faq__h2">Frequently Asked Questions</h2>
+  <p class="faq__text">
+    Here are some of our FAQs. If you have any other questions you’d like 
+    answered please feel free to email us.
+  </p>
 
-  Add to Firefox
-  Minimum version 55
-  Add & Install Extension
-
-  Add to Opera
-  Minimum version 46
-  Add & Install Extension
-
-  Frequently Asked Questions
+  <!-- <p><a href="javascript:toggleElement('a1')">What is Bookmark?</a></p> -->
+  <div class="faq__question-answer">
+    <div class="faq__question" onclick="toggleElement('answer-1', 'icon-1')">
+      <p class="faq__question--text">What is Bookmark?</p>
+      <img src="./images/icon-arrow.svg" alt="Icon arrow" class="faq__question--icon" id="icon-1">
+    </div>
+    <div class="faq__answer" id="answer-1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+      justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+    </div>
+  </div>
   
-  Here are some of our FAQs. If you have any other questions you’d like 
-  answered please feel free to email us.
+  <div class="faq__question-answer">
+    <div class="faq__question" onclick="toggleElement('answer-2', 'icon-2')">
+      <p class="faq__question--text">How can I request a new browser?</p>
+      <img src="./images/icon-arrow.svg" alt="Icon arrow" class="faq__question--icon" id="icon-2">
+    </div>
+    <div class="faq__answer" id="answer-2">
+      Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+      Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+      ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+      Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+    </div>
+  </div>
 
-  <!-- Question 1 -->
-  What is Bookmark?
+  <div class="faq__question-answer">
+    <div class="faq__question" onclick="toggleElement('answer-3', 'icon-3')">
+      <p class="faq__question--text">Is there a mobile app?</p>
+      <img src="./images/icon-arrow.svg" alt="Icon arrow" class="faq__question--icon" id="icon-3">
+    </div>
+    <div class="faq__answer" id="answer-3">
+      Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+      urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+      sollicitudin ex et ultricies bibendum.
+    </div>
+  </div>
+  
+  <div class="faq__question-answer">
+    <div class="faq__question" onclick="toggleElement('answer-4', 'icon-4')">
+      <p class="faq__question--text">What about other Chromium browsers?</p>
+      <img src="./images/icon-arrow.svg" alt="Icon arrow" class="faq__question--icon" id="icon-4">
+    </div>
+    <div class="faq__answer" id="answer-4">
+      Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+      vitae neque eget nisl gravida pellentesque non ut velit.
+    </div>
+  </div>
+  <button class="faq__btn">More Info</button>
+</section>
+  
+<footer class="footer">
+  <p class="footer__text">35,000+ already joined</p>
+  <h2 class="footer__h2">Stay up-to-date with what we’re doing</h2>
+  <div class="footer__email">
+    <input type="email" class="footer__email--input" placeholder="Enter your email address">
+    <button class="footer__email--btn">Contact Us</button>
+  </div>
+</footer>
+  
 
-  <!-- Answer 1 -->
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
-  justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+  
 
-  <!-- Question 2 -->
-  How can I request a new browser?
+  
 
-  <!-- Answer 2 -->
-  Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
-  Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
-  ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
-  Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-
-  <!-- Question 3 -->
-  Is there a mobile app?
-
-  <!-- Answer 3 -->
-  Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
-  urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
-  sollicitudin ex et ultricies bibendum.
-
-  <!-- Question 4 -->
-  What about other Chromium browsers?
-
-  <!-- Answer 4 -->
-  Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
-  vitae neque eget nisl gravida pellentesque non ut velit.
-
-  More Info
-
-  35,000+ already joined
-
-  Stay up-to-date with what we’re doing
-
-  Contact Us
+  
 
   Features
   Pricing

@@ -1,5 +1,6 @@
 .features {
-    margin: 3rem $margin-body-left 14rem $margin-body-left;
+    margin: 3rem $margin-body-left 10rem $margin-body-left;
+    text-align: center;
 
     &__h2 {
         @include h2;
@@ -26,13 +27,13 @@
             &:hover {
                 border-bottom: 3px solid $soft-red;
                 margin-top: -2px;
+
+                & > p {
+                    transform: translateY(2.5px);
+                }
             }
 
-            &:hover > p {
-                transform: translateY(2px);
-            }
-
-            &:first-child {
+            &:first-of-type {
                 margin-left: 12.5%;
             }
 
@@ -41,7 +42,7 @@
             }
         }
 
-        &--checkbox {
+        &--radio {
             display: none;
         }
 
@@ -101,29 +102,28 @@
     }
 }
 
-#tab-1:checked ~ .features__tabs--target-1 {
-    display: flex;
-}
-
-#tab-1:checked ~ .features__tabs--target-2,
-#tab-1:checked ~ .features__tabs--target-3 {
-    display: none;
-}
-
-#tab-2:checked ~ .features__tabs--target-2 {
-    display: flex;
-}
-
-#tab-2:checked ~ .features__tabs--target-1,
-#tab-2:checked ~ .features__tabs--target-3 {
-    display: none;
-}
-
+#tab-1:checked ~ .features__tabs--target-1,
+#tab-2:checked ~ .features__tabs--target-2,
 #tab-3:checked ~ .features__tabs--target-3 {
     display: flex;
 }
 
+#tab-1:checked ~ .features__tabs--target-2,
+#tab-1:checked ~ .features__tabs--target-3,
+#tab-2:checked ~ .features__tabs--target-1,
+#tab-2:checked ~ .features__tabs--target-3,
 #tab-3:checked ~ .features__tabs--target-1,
 #tab-3:checked ~ .features__tabs--target-2 {
     display: none;
+}
+
+#tab-1:checked ~ #label-1,
+#tab-2:checked ~ #label-2,
+#tab-3:checked ~ #label-3 {
+    border-bottom: 3px solid $soft-red;
+    margin-top: -2px;
+
+    & > p {
+        transform: translateY(2.5px);
+    }
 }

@@ -3,6 +3,7 @@
 $soft-blue: hsl(231, 69%, 60%);
 $soft-red: hsl(0, 94%, 66%);
 
+
 // COLORS NEUTRAL
 
 $grayish-blue: hsl(229, 8%, 60%);
@@ -10,7 +11,6 @@ $very-dark-blue: hsl(229, 31%, 21%);
 $medium-grayish-blue: hsl(210, 2%, 79%);
 $light-grayish-blue: hsl(0, 0%, 95%);
 $white: hsl(0, 100%, 100%);
-
 
 
 // TYPOGRAPHY
@@ -23,15 +23,14 @@ $font-weight-400: 400;
 $font-weight-500: 500;
 
 
-
 // PADDING & MARGIN
 
 $margin-body-left: 8vw;
 $margin-body-right: 4vw;
 
 
+// MIXINS
 
-// MIXIN
 @mixin btn ($font-color, $bg-color, $padding) {
     width: fit-content;
     padding: $padding;
