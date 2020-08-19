@@ -2,10 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem $margin-body-left;
+    margin: 2rem $margin-body-left 6rem $margin-body-left;
 
     @media only screen and (max-width: 600px) {
-        margin: 2rem .5rem;
+        margin: 2rem .5rem 4rem .5rem;
     }
 
     @media only screen and (max-width: 400px) {

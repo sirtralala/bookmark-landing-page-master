@@ -124,16 +124,18 @@
             width: 37vw;
             height: 25vw;
             position: absolute;
-            top: 10rem;
+            top: 14rem;
             right: 0;
             background-color: $soft-blue;
             border-radius: 10rem 0 0 10rem;
             z-index: -100;
 
             @media only screen and (max-width: 800px) {
-                width: 37vw;
-                height: 25vw;
-                top: 8rem;
+                top: 12rem;
+            }
+
+            @media only screen and (max-width: 600px) {
+                top: 11rem;
             }
 
             @media only screen and (max-width: 400px) {
