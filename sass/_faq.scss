@@ -4,11 +4,28 @@
 
     &__h2 {
         @include h2;
+
+        @media only screen and (max-width: 400px) {
+            max-width: 60%;
+            margin: 0 auto;
+        }
     }
 
     &__text {
         margin: 1rem auto 2rem auto;
         max-width: 40%;
+
+        @media only screen and (max-width: 1000px) {
+            max-width: 60%;
+        }
+
+        @media only screen and (max-width: 800px) {
+            max-width: 70%;
+        }
+
+        @media only screen and (max-width: 400px) {
+            max-width: 90%;
+        }
     }
 
     &__question-answer {
@@ -17,12 +34,28 @@
         text-align: left;
         border-bottom: 1px solid $medium-grayish-blue;
         cursor: pointer;
+
+        @media only screen and (max-width: 1000px) {
+            width: 60%;
+        }
+
+        @media only screen and (max-width: 800px) {
+            width: 70%;
+        }
+
+        @media only screen and (max-width: 400px) {
+            width: 90%;
+        }
     }
 
     &__question {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &:hover > &--text {
+            color: $soft-red;
+        }
 
         &--text {
             color: $very-dark-blue;
@@ -32,17 +65,30 @@
         &--icon {
             width: 1rem;
             height: 12px;
-        }
+            transition: transform .2s ease-out;
 
-        &--icon-close {
-            transform: rotate(180deg);
-            filter: invert(36%) sepia(88%) saturate(481%) hue-rotate(314deg) brightness(115%) contrast(96%);
+            &-close {
+                transform: rotate(180deg);
+                filter: invert(51%) sepia(68%) saturate(3405%) hue-rotate(328deg) brightness(99%) contrast(98%);
+            }
         }
     }
 
     &__answer {
-        display: none;
-        margin: 1rem auto;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        transform: translateY(-2rem);
+        transition: all .2s ease-out;
+
+        &--show {
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+            margin: 1rem 0;
+            transform: translateY(0);
+        }
     }
 
     &__btn {

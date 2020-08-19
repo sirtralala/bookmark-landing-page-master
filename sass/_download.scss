@@ -9,6 +9,14 @@
     &__text {
         margin: 0 auto 2.5rem auto;
         max-width: 50%;
+
+        @media only screen and (max-width: 800px) {
+            max-width: 70%;
+        }
+
+        @media only screen and (max-width: 400px) {
+            max-width: 80%;
+        }
     }
 
     &__browsers {
@@ -16,6 +24,10 @@
         justify-content: center;
         align-items: center;
         margin: 5rem 0;
+
+        @media only screen and (max-width: 400px) {
+            flex-direction: column;
+        }
 
         &--browser {
             display: flex;
@@ -26,6 +38,14 @@
             border-radius: 0 0 1rem 1rem;
             background: url("../images/bg-dots.svg") no-repeat 0 73%;
             box-shadow: .2rem .5rem .5rem $light-grayish-blue, -.2rem .5rem .5rem $light-grayish-blue;
+
+            @media only screen and (max-width: 500px) {
+                margin: 0 .2rem;
+            }
+
+            @media only screen and (max-width: 400px) {
+                padding: 2rem 10vw 1rem 10vw;
+            }
 
             &:first-child {
                 transform: translateY(-2rem);
@@ -55,6 +75,18 @@
             &-btn {
                 @include btn ($white, $soft-blue, .7rem 2rem);
                 margin: 3rem auto 0 auto;
+
+                @media only screen and (max-width: 900px) /* and (max-width: 400px) */ {
+                    padding: .5rem;
+                }
+
+                @media only screen and (max-width: 650px) {
+                    padding: .5rem .1rem;
+                }
+
+                @media only screen and (max-width: 400px) {
+                    padding: .5rem 1rem;
+                }
             }
         }
     }

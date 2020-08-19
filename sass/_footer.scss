@@ -4,6 +4,10 @@
     background-color: $soft-blue;
     text-align: center;
 
+    @media only screen and (max-width: 400px) {
+        padding: 3rem 0 5rem 0;
+    }
+
     &__text {
         font-size: .6rem;
         letter-spacing: .2rem;
@@ -17,19 +21,55 @@
         line-height: 1.7rem;
         width: 25%;
         margin: 1rem auto 2rem auto;
+
+        @media only screen and (max-width: 1100px) {
+            width: 35%;
+        }
+
+        @media only screen and (max-width: 800px) {
+            width: 45%;
+        }
+
+        @media only screen and (max-width: 550px) {
+            width: 60%;
+        }
+
+        @media only screen and (max-width: 400px) {
+            width: 80%;
+        }
     }
 
     &__email {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 30%;
+        height: 10vh;
+        margin: 0 auto;
+
+        @media only screen and (max-width: 1100px) {
+            width: 40%;
+        }
+
+        @media only screen and (max-width: 800px) {
+            width: 50%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            width: 70%;
+        }
+
+        @media only screen and (max-width: 400px) {
+            width: 80%;
+        }
 
         &--input {
-            width: 20%;
+            flex-basis: 65%;
             height: 2rem;
             padding: 1rem;
-            margin-right: 1rem;
-            border: none;
+            border: .15rem solid transparent;
             border-radius: .2rem;
+            z-index: 10;
 
             &::placeholder {
                 color: $medium-grayish-blue;
@@ -38,19 +78,184 @@
             &:focus {
                 outline: none;
             }
+
+            @media only screen and (max-width: 430px) {
+                padding: 1rem 0;
+            }
+
+            @media only screen and (max-width: 400px) {
+                padding: 1rem;
+                flex-basis: 100%;
+            }
+
+            &-invalid {
+                background: $white url('../images/icon-error.svg') no-repeat 95% center;
+                border: .15rem solid $soft-red;
+            }
         }
-    
+
         &--btn {
-            @include btn ($white, $soft-red, .5rem 1rem);
+            @include btn ($white, $soft-red, .5rem 0);
+            flex-basis: 30%;
+            height: 2.32rem;
             box-shadow: none;
             
             &:hover {
                 box-shadow: none;
             }
+
+            @media only screen and (max-width: 400px) {
+                flex-basis: 100%;
+                margin-top: .8rem;
+            }
         }
     }
 
-    
+    &__message {
+        visibility: hidden;
 
+        &--show {
+            visibility: visible;
+            width: 65%;
+            padding: .3rem 0 0 .5rem;
+            font-size: .7rem;
+            color: $white;
+            font-style: italic;
+            text-align: left;
+            background-color: $soft-red;
+            border-radius: .2rem;
+            transform: translateY(-.5rem);
 
+            @media only screen and (max-width: 400px) {
+                width: 100%;
+                transform: translateY(-4.7rem);
+            }
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    padding: 2rem $margin-body-right 2rem $margin-body-left;
+    background-color: $very-dark-blue;
+
+    @media only screen and (max-width: 600px) {
+        padding: 2rem .5rem;
+    }
+
+    @media only screen and (max-width: 400px) {
+        flex-direction: column;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        &--logo {
+            width: 148px;
+            height: 25px;
+
+            @media only screen and (max-width: 500px) {
+                width: 120px;
+            }
+
+            @media only screen and (max-width: 400px) {
+                width: 148px;
+            }
+
+            &-footer {
+                --color-letters: #FFF;
+                --color-circle: #5267DF;
+                --color-icon: #FFF;
+                cursor: pointer;
+            }   
+        }
+    }
+
+    &__list {
+        width: 60%;
+        list-style-type: none;
+        color: $medium-grayish-blue;
+        text-transform: uppercase;
+        font-size: .8rem;
+
+        @media only screen and (max-width: 600px) {
+            margin-left: 6vw;
+        }
+
+        @media only screen and (max-width: 500px) {
+            width: 65%;
+            margin-left: 0;
+        }
+
+        &--item {
+            display: inline;
+            margin-left: 5vw;
+
+            @media only screen and (max-width: 600px) {
+                margin-left: 2vw;
+            }
+
+            @media only screen and (max-width: 400px) {
+                display: block;
+                margin: 1.5rem 0;
+                text-align: center;
+            }
+
+            &:hover {
+                color: $soft-red;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__social-media {
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
+
+        @media only screen and (max-width: 500px) {
+            width: 15%;
+        }
+
+        @media only screen and (max-width: 400px) {
+            width: 25%;
+            justify-content: space-between;
+        }
+
+        &--item {
+            margin-left: 4vw;
+
+            @media only screen and (max-width: 500px) {
+                margin-left: 2vw;
+            }
+
+            @media only screen and (max-width: 400px) {
+                margin-left: 0;
+            }
+
+            &:hover {
+                filter: invert(51%) sepia(68%) saturate(3405%) hue-rotate(328deg) brightness(99%) contrast(98%);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.attribution {
+    background-color: $very-dark-blue;
+    color: $grayish-blue;
+    font-size: .7rem;
+    margin: 2rem auto;
+    padding: 1rem 0;
+    text-align: center;
+
+    & a {
+        color: $light-grayish-blue;
+
+        &:hover {
+            color: $soft-red;
+        }
+    }
 }

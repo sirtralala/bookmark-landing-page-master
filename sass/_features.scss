@@ -2,6 +2,18 @@
     margin: 3rem $margin-body-left 10rem $margin-body-left;
     text-align: center;
 
+    @media only screen and (max-width: 1000px) {
+        margin: 3rem $margin-body-left 3rem $margin-body-left;
+    }
+
+    @media only screen and (max-width: 600px) {
+        margin: 3rem .5rem 10rem .5rem;
+    }
+
+    @media only screen and (max-width: 400px) {
+        margin: 8rem .5rem;
+    }
+
     &__h2 {
         @include h2;
         margin-bottom: 1.5rem;
@@ -10,6 +22,14 @@
     &__text {
         margin: 0 auto 2.5rem auto;
         max-width: 50%;
+
+        @media only screen and (max-width: 1000px) {
+            max-width: 70%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            max-width: 100%;
+        }
     }
 
     &__tabs {
@@ -17,6 +37,10 @@
         justify-content: space-around;
         flex-wrap: wrap;
         margin: 0 auto;
+
+        @media only screen and (max-width: 600px) {
+            max-width: 100%;
+        }
         
         &--tab {
             width: 25%;
@@ -24,21 +48,38 @@
             cursor: pointer;
             border-bottom: 1px solid $medium-grayish-blue;
 
+            @media only screen and (max-width: 600px) {
+                width: 33.33%;
+            }
+
+            @media only screen and (max-width: 400px) {
+                width: 100%;
+            }
+
             &:hover {
                 border-bottom: 3px solid $soft-red;
                 margin-top: -2px;
 
-                & > p {
+                & span {
+                    display: block;
                     transform: translateY(2.5px);
                 }
             }
 
             &:first-of-type {
                 margin-left: 12.5%;
+
+                @media only screen and (max-width: 600px) {
+                    margin-left: 0;
+                }
             }
 
             &:last-of-type {
                 margin-right: 12.5%;
+
+                @media only screen and (max-width: 600px) {
+                    margin-right: 0;
+                }
             }
         }
 
@@ -58,22 +99,54 @@
 
             &-1::after {
                 @include features-bg-blue(38vw, 22vw, -7rem);
+
+                @media only screen and (max-width: 400px) {
+                    width: 118vw;
+                    height: 60vw; 
+                }
             }
 
             &-2::after {
                 @include features-bg-blue(38vw, 28vw, -8.5rem);
+
+                @media only screen and (max-width: 400px) {
+                    width: 108vw;
+                    height: 75vw;
+                    border-radius: 0 10rem 5rem 0;
+                }
             }
 
             &-3::after {
                 @include features-bg-blue(42vw, 28vw, -7rem);
+
+                @media only screen and (max-width: 400px) {
+                    width: 110vw;
+                    height: 78vw;
+                    border-radius: 0 10rem 5rem 0;
+                }
+            }
+
+            &-2 > .features__tabs--target-img-container,
+            &-3 > .features__tabs--target-img-container {
+                @media only screen and (max-width: 400px) {
+                    margin-bottom: 5rem;
+                }
             }
             
             &-img {
                 width: 36vw;
 
+                @media only screen and (max-width: 400px) {
+                    width: 90vw;
+                }
+
                 &-container {
                     height: 18rem;
                     width: 50%;
+
+                    @media only screen and (max-width: 400px) {
+                        width: 100%;
+                    }
                 }
             }
 
@@ -84,15 +157,35 @@
                 justify-content: center;
                 align-items: flex-start;
                 margin-left: 8vw;
+
+                @media only screen and (max-width: 800px) {
+                    margin-left: 2vw;
+                }
+
+                @media only screen and (max-width: 400px) {
+                    width: 100%;
+                    align-items: center;
+                    margin-left: 0;
+                }
             }
     
             &-h2 {
                 @include h2;
+
+                @media only screen and (max-width: 620px) {
+                    font-size: 1.3rem;
+                    line-height: 1.7rem;
+                }
             }
     
             &-text {
                 text-align: left;
                 margin: 1.5rem 0;
+
+                @media only screen and (max-width: 400px) {
+                    text-align: center;
+                    margin: 1.5rem;
+                }
             }
     
             &-btn {
@@ -106,6 +199,10 @@
 #tab-2:checked ~ .features__tabs--target-2,
 #tab-3:checked ~ .features__tabs--target-3 {
     display: flex;
+
+    @media only screen and (max-width: 400px) {
+        flex-direction: column;
+    }
 }
 
 #tab-1:checked ~ .features__tabs--target-2,
@@ -123,7 +220,8 @@
     border-bottom: 3px solid $soft-red;
     margin-top: -2px;
 
-    & > p {
+    & > span {
+        display: block;
         transform: translateY(2.5px);
     }
 }

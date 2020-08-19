@@ -3,30 +3,99 @@
     align-items: center;
     margin: 0 $margin-body-right 0 $margin-body-left;
 
+    @media only screen and (max-width: 600px) {
+        margin: 0 .5rem;
+    }
+
+    @media only screen and (max-width: 400px) {
+        flex-direction: column;
+    }
+
     &__content {
         width: 50%;
         margin-right: 5vw;
+
+        @media only screen and (max-width: 400px) {
+            order: 2;
+            width: 100%;
+            margin: 2rem 0 0 0;
+            text-align: center;
+        }
 
         &--h1 {
             font-size: 2.5rem;
             line-height: 2.5rem;
             font-weight: $font-weight-500;
             color: $very-dark-blue;
+
+            @media only screen and (max-width: 800px) {
+                font-size: 2rem;
+                line-height: 2rem;
+            }
+
+            @media only screen and (max-width: 600px) {
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+            }
+
+            @media only screen and (max-width: 400px) {
+                margin: 0 8vw;
+            }
         }
 
         &--text {
             margin: 2rem 0;
+
+            @media only screen and (max-width: 800px) {
+                margin: 1rem 0;
+            }
+
+            @media only screen and (max-width: 400px) {
+                margin: 1rem 0 2rem 0;
+            }
         }
 
         &--buttons {
+            display: flex;
+            flex-wrap: nowrap;
+
+            @media only screen and (max-width: 400px) {
+                justify-content: center;
+            }
 
             &-chrome {
                 @include btn($white, $soft-blue, .5rem 1rem);
                 margin-right: .7rem;
+
+                @media only screen and (max-width: 800px) {
+                    margin-right: .2rem;
+                    padding: .5rem;
+                }
+
+                @media only screen and (max-width: 625px) {
+                    padding: .5rem .1rem;
+                }
+
+                @media only screen and (max-width: 400px) {
+                    padding: .5rem 1rem;
+                    margin-right: .7rem;
+                }
             }
 
             &-firefox {
                 @include btn($very-dark-blue, $light-grayish-blue, .5rem 1rem);
+
+                @media only screen and (max-width: 800px) {
+                    padding: .5rem;
+                }
+
+                @media only screen and (max-width: 625px) {
+                    padding: .5rem .1rem;
+                }
+
+                @media only screen and (max-width: 400px) {
+                    padding: .5rem 1rem;
+                }
                 
                 &:hover {
                     color: $very-dark-blue;
@@ -40,6 +109,10 @@
     &__img {
         align-self: flex-start;
         width: 50%;
+
+        @media only screen and (max-width: 400px) {
+            width: 100%;
+        }
         
         &--image {
             width: 100%;
@@ -56,6 +129,18 @@
             background-color: $soft-blue;
             border-radius: 10rem 0 0 10rem;
             z-index: -100;
+
+            @media only screen and (max-width: 800px) {
+                width: 37vw;
+                height: 25vw;
+                top: 8rem;
+            }
+
+            @media only screen and (max-width: 400px) {
+                width: 74vw;
+                height: 50vw;
+                top: 40vw;
+            }
         }
     }
 }
